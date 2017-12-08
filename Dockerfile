@@ -4,7 +4,7 @@ FROM alpine:3.1
 RUN apk add --update nodejs
 
 # Install app dependencies
-COPY /home/syarbeat/nodejs-container/* /src/
+COPY * /src/
 RUN cd /src; npm install
 
 # Bundle app source
