@@ -17,7 +17,7 @@ var csrf = require('csurf');
 var flash = require('connect-flash');
 var config = require('./config');
 
-client.auth('redis-password', function (err) {
+client.auth('', function (err) {
     if(err) throw err;
 });
 
