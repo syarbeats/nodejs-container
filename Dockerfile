@@ -1,14 +1,15 @@
-FROM alpine:3.1
+FROM ubuntu:16.04
 
 # Update
-RUN apk add --update nodejs
+RUN apt-get update 
+RUN apt-get install -y nodejs npm git
+
+RUN git clone https://github.com/syarbeats/nodejs-container.git
 
 # Install app dependencies
-COPY * /src/
-RUN cd /src; npm install
+RUN cd /nodejs-container; npm install
 
-# Bundle app source
-COPY . /src
+COPY . /nodejs-container
 
 EXPOSE  8585
-CMD ["node", "/src/app.js"]
+CMD ["nodejs", "/nodejs-container/app.js"]

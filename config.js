@@ -1,5 +1,5 @@
 var config = {
-    port: 3000,
+    port: 8585,
     secret: 'secret',
     redisUrl: 'redis://localhost',
     redisServer: {
