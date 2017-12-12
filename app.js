@@ -17,9 +17,14 @@ var csrf = require('csurf');
 var flash = require('connect-flash');
 var config = require('./config');
 
-client.auth('', function (err) {
+/*client.auth('Diah!)@(*', function (err) {
     if(err) throw err;
+});*/
+
+client.on("error", function (err) {
+    console.log("Error CHoy: " + err);
 });
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
