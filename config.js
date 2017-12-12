@@ -3,7 +3,7 @@ var config = {
     secret: 'secret',
     redisUrl: 'redis://localhost',
     redisServer: {
-        host: 'localhost',
+        host: 'redis',
         port: 6379
         },
     routes: {
